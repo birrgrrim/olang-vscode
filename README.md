@@ -1,7 +1,7 @@
 # O Language Support
 
-![Version](https://img.shields.io/github/v/release/birrgrrim/olang-vscode)
-![License](https://img.shields.io/github/license/birrgrrim/olang-vscode)
+[![Version](https://img.shields.io/github/v/tag/birrgrrim/olang-vscode?label=version)](https://github.com/birrgrrim/olang-vscode/releases/latest)
+[![License](https://img.shields.io/github/license/birrgrrim/olang-vscode)](https://github.com/birrgrrim/olang-vscode/blob/main/LICENSE)
 [![VS Code Compatibility](https://img.shields.io/badge/vscode-%5E1.0.0-blue)](https://code.visualstudio.com/)
 
 This extension adds language support for the O programming language to Visual Studio Code and Cursor IDE.
