@@ -53,17 +53,6 @@
                             "match": "\\\\."
                         }
                     ]
-                },
-                {
-                    "name": "string.quoted.single.o",
-                    "begin": "'",
-                    "end": "'",
-                    "patterns": [
-                        {
-                            "name": "constant.character.escape.o",
-                            "match": "\\\\."
-                        }
-                    ]
                 }
             ]
         },

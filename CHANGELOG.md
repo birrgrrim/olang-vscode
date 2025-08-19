@@ -5,6 +5,12 @@ All notable changes to the "olang" extension will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.2] - 2024-01-25
+
+### Changed
+- Removed single quote string support as it's used only for single characters in O language
+- Updated syntax highlighting rules to better match O language specifications
+
 ## [0.0.1] - 2024-01-25
 
 ### Added
