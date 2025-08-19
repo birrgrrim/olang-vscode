@@ -1,0 +1,41 @@
+{
+  "name": "olang",
+  "displayName": "O Language",
+  "description": "O Language support extension for VS Code and Cursor IDE providing syntax highlighting and basic language features",
+  "version": "0.0.1",
+  "publisher": "volodymyr-gnateiko",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/birrgrrim/olang-vscode.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "o",
+    "olang",
+    "syntax",
+    "highlighting"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "o",
+      "aliases": ["O", "o"],
+      "extensions": [".o"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "o",
+      "scopeName": "source.o",
+      "path": "./syntaxes/o.tmLanguage.json"
+    }]
+  },
+  "bugs": {
+    "url": "https://github.com/birrgrrim/olang-vscode/issues"
+  },
+  "homepage": "https://github.com/birrgrrim/olang-vscode#readme"
+}
