@@ -2,7 +2,7 @@
   "name": "olang",
   "displayName": "O Language",
   "description": "O Language support extension for VS Code and Cursor IDE providing syntax highlighting and basic language features",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "birrgrrim",
   "license": "MIT",
   "repository": {
@@ -24,7 +24,7 @@
   ],
   "icon": "images/icon.png",
   "galleryBanner": {
-    "color": "#C80000",
+    "color": "#1E2730",
     "theme": "dark"
   },
   "contributes": {
