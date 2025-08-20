@@ -37,6 +37,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed single quote string support as it's used only for single characters in O language
 - Updated syntax highlighting rules to better match O language specifications
 
+[0.0.2]: https://github.com/birrgrrim/olang-vscode/compare/v0.0.1...v0.0.2
+
 ## [0.0.1] - 2024-01-25
 
 ### Added
