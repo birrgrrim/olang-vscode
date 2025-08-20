@@ -24,7 +24,7 @@
   ],
   "icon": "images/icon.png",
   "galleryBanner": {
-    "color": "#1E2730",
+    "color": "#1C242D",
     "theme": "dark"
   },
   "main": "./out/extension.js",
