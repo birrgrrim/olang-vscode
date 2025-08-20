@@ -2,7 +2,7 @@
   "name": "olang",
   "displayName": "O Language",
   "description": "O Language support extension for VS Code and Cursor IDE providing syntax highlighting and basic language features",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "publisher": "birrgrrim",
   "license": "MIT",
   "repository": {
@@ -28,6 +28,16 @@
     "theme": "dark"
   },
   "main": "./out/extension.js",
+  "extensionKind": [
+    "workspace",
+    "ui"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true,
+      "description": "REPL integration requires running tachyon executable"
+    }
+  },
   "activationEvents": [
     "onLanguage:o",
     "onCommand:olang.startRepl",
