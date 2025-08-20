@@ -1,3 +1,14 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Build output
+out/
 *.vsix
-.env
+
+# IDE specific
+.vscode-test/
+.DS_Store
+
+# Backup files
+*.bak
+package.json.bak

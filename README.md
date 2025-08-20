@@ -4,82 +4,67 @@
 [![License](https://img.shields.io/github/license/birrgrrim/olang-vscode)](https://github.com/birrgrrim/olang-vscode/blob/main/LICENSE)
 [![VS Code Compatibility](https://img.shields.io/badge/vscode-%5E1.0.0-blue)](https://code.visualstudio.com/)
 
-This extension adds language support for the O programming language to Visual Studio Code and Cursor IDE.
+O Language support extension for VS Code and Cursor IDE providing syntax highlighting and REPL integration.
 
 ## Features
 
-- Syntax highlighting for O language
-- Code snippets
-- Comment toggling (line and block comments)
+### Syntax Highlighting
+- Full support for O language syntax:
+  - Keywords and control structures
+  - Built-in types
+  - Special constants (null and infinity values)
+  - Numbers (decimal, hexadecimal, boolean)
+  - Strings and comments
+
+### REPL Integration
+- Start tachyon REPL directly from VS Code
+- Evaluate code directly in the editor:
+  - Selected text (Cmd/Ctrl+Enter)
+  - Entire file (Cmd/Ctrl+Shift+Enter)
+- Optional rlwrap support for better REPL experience
+
+### Language Features
+- Comment toggling (line and block)
 - Bracket matching
 - Auto-closing pairs
 - Basic indentation rules
 
-## Supported file extensions
+## Requirements
+- `tachyon` executable should be in PATH or configured
+- Optional: `rlwrap` for better REPL experience
 
-- `.o` - O language source files
+## Extension Settings
+This extension contributes the following settings:
 
-## Syntax Highlighting
+* `olang.tachyonPath`: Path to tachyon executable (default: "tachyon")
+* `olang.useRlwrap`: Enable/disable rlwrap support (default: true)
 
-The extension provides syntax highlighting for:
-- Keywords and control structures
-- Built-in types
-- Numbers (decimal and hexadecimal)
-- Strings
-- Comments
-- Functions
-- Operators
+## Keybindings
+- `Cmd/Ctrl+Enter` - Evaluate selected text in REPL
+- `Cmd/Ctrl+Shift+Enter` - Evaluate current file in REPL
 
-## Language Features
-
-### Comments
-- Line comments: `// This is a line comment`
-- Block comments: `/* This is a block comment */`
-
-### Code Snippets
-Common O language patterns and structures are supported with snippets.
-
-### Auto-closing
-The extension automatically closes:
-- Brackets: `()`, `[]`, `{}`
-- Quotes: `""`, `''`
+## Commands
+- `O: Start REPL` - Start tachyon REPL
+- `O: Evaluate Selection` - Evaluate selected code
+- `O: Evaluate File` - Load current file in REPL
 
 ## Installation
 
-### VS Code Marketplace
-This extension is not yet published to the VS Code Marketplace.
+### VS Code
+Install from VS Code Marketplace:
+1. Open VS Code
+2. Go to Extensions (Ctrl+Shift+X)
+3. Search for "O Language"
+4. Click Install
 
-### Manual Installation
-1. Download the `.vsix` file
-2. Install using:
-   - VS Code: `code --install-extension olang.vsix`
-   - Cursor: Copy to `~/.cursor/extensions`
-
-## Contributing
-
-The extension is open source and available at [repository-url]. Contributions are welcome!
-
-## License
-
-This extension is licensed under the [MIT License](LICENSE).
-
-## Release Notes
-
-### 0.0.1
-- Initial release
-- Basic syntax highlighting
-- Comment toggling
-- Bracket matching
+### Cursor IDE
+Install from Extensions (Marketplace):
+1. Open Cursor
+2. Go to Extensions (Ctrl+Shift+X)
+3. Search for "O Language"
+4. Click Install
 
 ## Links
-
+- [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=birrgrrim.olang)
+- [Open VSX Registry](https://open-vsx.org/extension/birrgrrim/olang)
 - [O Language Documentation](https://theplatform.technology/index.html)
-- [Extension Repository](your-repo-url)
-
-## Known Issues
-
-Please report any issues on the [GitHub repository](your-repo-url/issues).
-
----
-
-**Enjoy!**

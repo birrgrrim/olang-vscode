@@ -2,7 +2,7 @@
   "name": "olang",
   "displayName": "O Language",
   "description": "O Language support extension for VS Code and Cursor IDE providing syntax highlighting and basic language features",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "publisher": "birrgrrim",
   "license": "MIT",
   "repository": {
@@ -27,21 +27,89 @@
     "color": "#1E2730",
     "theme": "dark"
   },
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:o",
+    "onCommand:olang.startRepl",
+    "onCommand:olang.evalSelection",
+    "onCommand:olang.evalFile"
+  ],
   "contributes": {
-    "languages": [{
-      "id": "o",
-      "aliases": ["O", "o"],
-      "extensions": [".o"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "o",
-      "scopeName": "source.o",
-      "path": "./syntaxes/o.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "o",
+        "aliases": [
+          "O",
+          "o"
+        ],
+        "extensions": [
+          ".o"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "o",
+        "scopeName": "source.o",
+        "path": "./syntaxes/o.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "olang.startRepl",
+        "title": "O: Start REPL"
+      },
+      {
+        "command": "olang.evalSelection",
+        "title": "O: Evaluate Selection"
+      },
+      {
+        "command": "olang.evalFile",
+        "title": "O: Evaluate File"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "olang.evalSelection",
+        "key": "ctrl+enter",
+        "mac": "cmd+enter",
+        "when": "editorTextFocus && editorLangId == 'o'"
+      },
+      {
+        "command": "olang.evalFile",
+        "key": "ctrl+shift+enter",
+        "mac": "cmd+shift+enter",
+        "when": "editorTextFocus && editorLangId == 'o'"
+      }
+    ],
+    "configuration": {
+      "title": "O Language",
+      "properties": {
+        "olang.tachyonPath": {
+          "type": "string",
+          "default": "tachyon",
+          "description": "Path to tachyon executable"
+        },
+        "olang.useRlwrap": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use rlwrap for REPL"
+        }
+      }
+    }
   },
   "bugs": {
     "url": "https://github.com/birrgrrim/olang-vscode/issues"
   },
-  "homepage": "https://github.com/birrgrrim/olang-vscode#readme"
+  "homepage": "https://github.com/birrgrrim/olang-vscode#readme",
+  "devDependencies": {
+    "@types/node": "^16.18.126",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.x"
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  }
 }

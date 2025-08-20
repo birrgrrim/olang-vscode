@@ -1,4 +1,4 @@
-.PHONY: clean package package-dev publish publish-vscode publish-ovsx install-vscode install-cursor tag version help
+.PHONY: clean package compile publish publish-vscode publish-ovsx install-vscode install-cursor tag version help
 
 # Variables
 EXTENSION_NAME := olang
@@ -11,19 +11,16 @@ ORIGINAL_PUBLISHER := birrgrrim
 package:
 	vsce package
 
-# Package with dev publisher
-package-dev:
-	cp package.json package.json.bak
-	sed -i '' 's/"publisher": "$(ORIGINAL_PUBLISHER)"/"publisher": "$(DEV_PUBLISHER)"/' package.json
-	vsce package
-	mv package.json.bak package.json
-
 # Publish to both marketplaces
 publish: publish-vscode publish-ovsx
 
-# Publish to VS Code Marketplace
-publish-vscode:
-	vsce publish
+# Add this before package rule
+compile:
+	npm run compile
+
+# Update package rule
+package: compile
+	vsce package
 
 # Publish to Open VSX Registry
 publish-ovsx:
@@ -61,6 +58,7 @@ help:
 	@echo "Available commands:"
 	@echo "  make package        - Create VSIX package"
 	@echo "  make package-dev    - Create VSIX package with dev publisher"
+	@echo "  make compile"       - Compile ts scripts
 	@echo "  make publish        - Publish to both marketplaces"
 	@echo "  make publish-vscode - Publish to VS Code Marketplace"
 	@echo "  make publish-ovsx   - Publish to Open VSX Registry"

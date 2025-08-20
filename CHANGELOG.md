@@ -5,6 +5,23 @@ All notable changes to the "olang" extension will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2024-01-25
+
+### Added
+- REPL support with tachyon integration
+- New commands:
+  - `O: Start REPL` - starts tachyon REPL (with optional rlwrap support)
+  - `O: Evaluate Selection` - evaluates selected code in REPL
+  - `O: Evaluate File` - loads current file in REPL
+- New keybindings:
+  - `Cmd/Ctrl+Enter` - evaluate selection
+  - `Cmd/Ctrl+Shift+Enter` - evaluate file
+- Configuration options:
+  - `olang.tachyonPath` - path to tachyon executable
+  - `olang.useRlwrap` - enable/disable rlwrap support
+
+[0.2.0]: https://github.com/birrgrrim/olang-vscode/compare/v0.1.1...v0.2.0
+
 ## [0.1.1] - 2024-01-25
 
 ### Changed
@@ -29,7 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Auto-closing pairs
   - Basic indentation rules
 
-[0.1.0]: https://github.com/birrgrrim/olang-vscode/releases/tag/v0.1.0
+[0.1.0]: https://github.com/birrgrrim/olang-vscode/releases/tag/v0.0.4-v0.1.0
 
 ## [0.0.4] - 2024-01-25
 
