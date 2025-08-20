@@ -38,7 +38,7 @@
         "keywords": {
             "patterns": [{
                 "name": "keyword.control.o",
-                "match": "\\b(if|else|while|for|return|break|continue|switch|case|default|func|struct|enum|const|var|import|package|interface|type|map|chan|go|select|defer|fallthrough|range|true|false|nil)\\b"
+                "match": "\\b(if|elif|else|reagent|react|return|each|load|show|meta|get|set|till|parse|eval|spawn|yield|read|write|readln|print|println|count|enlist|distinct|abs|mod|ceil|floor|frac|argv|setenv|getenv|os|system)\\b"
             }]
         },
         "strings": {
@@ -65,6 +65,10 @@
                 {
                     "name": "constant.numeric.hexadecimal.o",
                     "match": "\\b0x[0-9a-fA-F]+\\b"
+                },
+                {
+                    "name": "constant.numeric.boolean.o",
+                    "match": "\\b[0-1]+b\\b"
                 }
             ]
         },
@@ -80,11 +84,7 @@
             "patterns": [
                 {
                     "name": "storage.type.o",
-                    "match": "\\b(int|float|string|bool|byte|rune|complex64|complex128|error)\\b"
-                },
-                {
-                    "name": "storage.type.numeric.o",
-                    "match": "\\b(int8|int16|int32|int64|uint8|uint16|uint32|uint64|float32|float64)\\b"
+                    "match": "\\b(bool|byte|short|int|long|symbol|char|guid|real|float|timestamp|timespan|datetime|date|month|time|minute|second|dict|signal)\\b"
                 }
             ]
         },

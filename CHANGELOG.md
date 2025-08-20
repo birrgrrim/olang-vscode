@@ -5,6 +5,32 @@ All notable changes to the "olang" extension will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.3] - 2024-01-25
+
+### Changed
+- Updated type definitions to match official O language reference
+- Added correct scalar types:
+  - bool, byte, short, int, long
+  - symbol, char, guid
+  - real, float
+  - timestamp, timespan, datetime
+  - date, month, time, minute, second
+- Updated keywords to match official O language reference
+- Added comprehensive list of keywords:
+  - Control flow: if, elif, else, till
+  - Reactive: reagent, react
+  - I/O: read, write, readln, print, println
+  - System: load, spawn, argv, setenv, getenv, os, system
+  - Meta-programming: meta, parse, eval
+  - Functions: return, yield
+  - Collections: each, count, enlist, distinct
+  - Math: abs, mod, ceil, floor, frac
+  - Other: get, set, show
+
+[Previous versions...]
+
+[0.0.3]: https://github.com/birrgrrim/olang-vscode/compare/v0.0.2...v0.0.3
+
 ## [0.0.2] - 2024-01-25
 
 ### Changed
