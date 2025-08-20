@@ -38,7 +38,7 @@
         "keywords": {
             "patterns": [{
                 "name": "keyword.control.o",
-                "match": "\\b(if|elif|else|reagent|react|return|each|load|show|meta|get|set|till|parse|eval|spawn|yield|read|write|readln|print|println|count|enlist|distinct|abs|mod|ceil|floor|frac|argv|setenv|getenv|os|system)\\b"
+                "match": "\\b(if|elif|else|reagent|react|return|each|load|show|meta|get|set|till|parse|eval|spawn|yield|read|write|readln|print|println|count|enlist|distinct|abs|mod|ceil|floor|frac|argv|setenv|getenv|os|system|kill|panic|close|sleep|exit|match|test)\\b"
             }]
         },
         "strings": {
@@ -69,6 +69,10 @@
                 {
                     "name": "constant.numeric.boolean.o",
                     "match": "\\b[0-1]+b\\b"
+                },
+                {
+                    "name": "constant.numeric.null.o",
+                    "match": "\\b0[NW][xhijgefpnzdmtu0]|0[nwNW]\\b"
                 }
             ]
         },

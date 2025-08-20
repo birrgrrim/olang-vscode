@@ -5,6 +5,23 @@ All notable changes to the "olang" extension will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.4] - 2024-01-25
+
+### Added
+- Support for null constants (0N-prefixed):
+  - 0Nx, 0Nh, 0Ni, 0N, 0n, 0Nj, 0Ng, 0Ne, 0Nf, 0Np, 0Nn, 0Nz, 0Nd, 0Nm, 0Nt, 0Nu, 0NV, 0N0
+- Support for infinity constants (0W-prefixed):
+  - 0Wx, 0Wh, 0Wi, 0W, 0w, 0Wj, 0Wg, 0We, 0Wf, 0Wp, 0Wn, 0Wz, 0Wd, 0Wm, 0Wt, 0Wu, 0WV, 0W0
+
+### Changed
+- Added missing keywords:
+  - System control: kill, panic, close, sleep, exit
+  - Control flow: match, test
+
+[Previous versions...]
+
+[0.0.4]: https://github.com/birrgrrim/olang-vscode/compare/v0.0.3...v0.0.4
+
 ## [0.0.3] - 2024-01-25
 
 ### Changed
