@@ -7,9 +7,7 @@ VSIX_FILE := $(EXTENSION_NAME)-$(VERSION).vsix
 DEV_PUBLISHER := birrgrrim-dev
 ORIGINAL_PUBLISHER := birrgrrim
 
-# Build the extension package
-package:
-	vsce package
+
 
 # Publish to both marketplaces
 publish: publish-vscode publish-ovsx
@@ -21,6 +19,10 @@ compile:
 # Update package rule
 package: compile
 	vsce package
+
+# Publish to VS Code Marketplace
+publish-vscode:
+	vsce publish
 
 # Publish to Open VSX Registry
 publish-ovsx:
